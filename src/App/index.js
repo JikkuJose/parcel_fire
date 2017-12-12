@@ -1,5 +1,12 @@
 import React from "react"
 
+import { Fire } from "./Fire"
+
 export function App() {
-  return <div className="pa3 bg-yellow sans-serif">Parcel!</div>
+  return (
+    <div>
+      <div className="pa3 bg-yellow sans-serif">Parcel!</div>
+      <Fire />
+    </div>
+  )
 }
