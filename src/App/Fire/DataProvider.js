@@ -12,10 +12,7 @@ export class DataProvider extends Component {
   }
 
   firebaseSetup() {
-    const dataRef = firebase
-      .database()
-      .ref()
-      .child("parcelApp")
+    const dataRef = firebase.database().ref()
 
     dataRef.on("value", snap => {
       this.setState(s => ({ data: snap.val() }))
