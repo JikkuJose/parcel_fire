@@ -1,3 +1,3 @@
-# Try Parcel!
+# Parcel Fire
 
-A zero config bundler!
+Project to try Parcel & Firebase!
