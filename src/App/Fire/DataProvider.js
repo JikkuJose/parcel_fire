@@ -7,7 +7,7 @@ export class DataProvider extends Component {
     super(props)
 
     this.state = {
-      data: null,
+      data: { greeting: "local content" },
     }
   }
 
@@ -18,7 +18,7 @@ export class DataProvider extends Component {
       .child("parcelApp")
 
     dataRef.on("value", snap => {
-      this.setState(s => snap.val())
+      this.setState(s => ({ data: snap.val() }))
     })
   }
 
@@ -28,6 +28,7 @@ export class DataProvider extends Component {
 
   render() {
     const { render } = this.props
+    const { data } = this.state
 
     return render({ data })
   }

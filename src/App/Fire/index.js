@@ -6,9 +6,9 @@ import { DataProvider } from "./DataProvider"
 export function Fire() {
   return (
     <DataProvider
-      render={data => (
+      render={({ data }) => (
         <div>
-          <div className="pa3 sans-serif">{data.greeting}</div>
+          <div className="pa3 h3 bg-red sans-serif">{data.greeting}</div>
         </div>
       )}
     />
